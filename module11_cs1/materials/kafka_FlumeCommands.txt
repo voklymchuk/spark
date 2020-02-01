@@ -1,0 +1,32 @@
+kafka-topics --create --zookeeper ip-20-0-21-161.ec2.internal:2181 --replication-factor 1 --partitions 1 --topic testawa2
+
+another console- only belwo command
+telnet localhost 44444
+
+
+kafka-topics --list --zookeeper ip-20-0-21-161.ec2.internal:2181
+
+kafka-topics --describe --zookeeper ip-20-0-21-161.ec2.internal:2181 --topic edureka_121039
+
+kafka-topics --create --zookeeper ip-20-0-21-161.ec2.internal:2181 --replication-factor 1 --partitions 1 --topic testawa2
+
+kafka-topics --list --zookeeper ip-20-0-21-161.ec2.internal:2181
+
+kafka-topics --zookeeper ip-20-0-21-161.ec2.internal:2181 --delete --topic testawa3
+
+kafka-topics --describe --zookeeper ip-20-0-21-161.ec2.internal:2181 --topic edureka_121039
+
+
+flume-ng agent --conf conf --conf-file netcat.conf.txt --name NetcatAgent
+
+
+kafka-topics --create --topic wordcount_topic_121039 --replication-factor 1 --partitions 3 --zookeeper  ip-20-0-21-161.ec2.internal:2181
+
+
+flume-ng agent --conf conf --conf-file kakfa-flume-hdfs.conf.txt --name agent1
+
+
+spark2-submit --master yarn kafka_spark_wc2.py ip-20-0-21-161.ec2.internal:2181 wordcount_topic_121039
+
+
+kafka-console-producer --topic wordcount_topic_121039 --broker-list ip-20-0-31-210.ec2.internal:9092, ip-20-0-31-221.ec2.internal:9092, ip-20-0-31-221.ec2.internal:9092

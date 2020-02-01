@@ -1,0 +1,8 @@
+gcloud dataproc clusters create my-cluster \
+    --max-idle="10m" \
+    --image-version 1.3 \
+    --metadata 'MINICONDA_VARIANT=3' \
+    --metadata 'MINICONDA_VERSION=latest' \
+    --metadata 'PIP_PACKAGES=pandas pyspark requests numpy matplotlib aiohttp python-dateutil progressbar nest-asyncio gensim kafka-python' \
+    --metadata=bucket=gs://drive3 \
+    --initialization-actions gs://dataproc-initialization-actions/conda/bootstrap-conda.sh,gs://dataproc-initialization-actions/conda/install-conda-env.sh,gs://drive3/Documents/code/spark/cluster_init/set_up_vars.sh
