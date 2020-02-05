@@ -1,1 +1,0 @@
-{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1580823145863,"sparkVersion":"2.4.4","uid":"StringIndexer_86c09c302389","paramMap":{"outputCol":"label","inputCol":"spam"},"defaultParamMap":{"handleInvalid":"error","outputCol":"StringIndexer_86c09c302389__output","stringOrderType":"frequencyDesc"}}
