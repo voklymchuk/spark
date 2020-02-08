@@ -70,6 +70,7 @@ def main():
             'screenshots_num',
             'lang_num',
             'vpp_lic']
+
     # rename columns containing period character
     df_store = df_store.toDF(*cols)
     LOGGER.info("\n\n2.\tParse the data as csv\tDone!\n")
